@@ -7,14 +7,17 @@ namespace ConsoleApp3
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+            
+            int i = 0;
 
 
-
-            for (int i = 5; i > 1; i--)
+            while (true) 
             {
+                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
                 Console.WriteLine("Iteration {0}", i);
-                switch (Console.ReadLine())
+                string text = Console.ReadLine();
+                
+                switch (text)
                 {
                     case "red":
                         Console.BackgroundColor = ConsoleColor.Red;
@@ -37,13 +40,15 @@ namespace ConsoleApp3
                         Console.WriteLine("Your color is cyan!");
                         break;
                     default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is yellow!");
-                        break;
+                        continue;
 
                 }
+                if (text == "stop")
+                {
+                    Console.WriteLine("Цикл остановлен");
+                    break;
+                }
+                i++;
             }
         }
     }
