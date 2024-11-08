@@ -7,49 +7,26 @@ namespace ConsoleApp3
         static void Main(string[] args)
         {
 
-            
-            int i = 0;
+            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
 
-
-            while (true) 
+            for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
             {
-                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
-                Console.WriteLine("Iteration {0}", i);
-                string text = Console.ReadLine();
-                
-                switch (text)
-                {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is red!");
-                        break;
-
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is green!");
-                        break;
-
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is cyan!");
-                        break;
-                    default:
-                        continue;
+                for (int k = 0; k < array.GetUpperBound(0) + 1; k++) 
+                { 
+                    Console.Write(array[k, i] + " ");
+                    
 
                 }
-                if (text == "stop")
-                {
-                    Console.WriteLine("Цикл остановлен");
-                    break;
-                }
-                i++;
+                Console.WriteLine();
             }
+
+
+            
+
+
+
+
+
         }
     }
 }
