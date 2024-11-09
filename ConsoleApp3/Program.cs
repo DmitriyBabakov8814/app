@@ -7,37 +7,54 @@ namespace ConsoleApp3
         static void Main(string[] args)
         {
 
-            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
 
-            for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
+
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            int temp = 0;
+
+
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
             {
-                for (int k = 0; k < array.GetUpperBound(0) + 1; k++) 
-                { 
-                    Console.Write(array[k, i] + " ");
-                    
+                for (int j = 0; j <= arr.GetUpperBound(1); j++)
 
+                {
+                    Console.Write(arr[i, j] + " ");
                 }
                 Console.WriteLine();
             }
 
 
+            Console.WriteLine();
+
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            {
+                for (int j = 0; j <= arr.GetUpperBound(1); j++)
+                {
+                    for ( int k = j + 1; k <= arr.GetUpperBound(1); k++)
+                    {
+                        temp = arr[i, j];
+                        if (arr[i, j] > arr[i, k])
+                        {
+                            arr[i, j] = arr[i, k];
+                            arr[i, k] = temp;
+
+                        }
+                        
+                    }
+                }
+                Console.WriteLine();
+            }
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            {
+                for(int j = 0;j <= arr.GetUpperBound(1); j++)
+
+                {
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine() ;
+            }
             
-
-
-
-
-
         }
     }
 }
 
-enum DayOfWeek : byte
-{
-    Monday = 1,
-    Tuesday, 
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday,
-    Sunday
-}
