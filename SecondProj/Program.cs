@@ -43,9 +43,9 @@
 
                 User.favcolors = new string[3];
 
-                for (int i = 0; i < User.favcolors.Length; i++)
+                for (int j = 0; j < User.favcolors.Length; j++)
                 {
-                    User.favcolors[i] = Console.ReadLine();
+                    User.favcolors[j] = Console.ReadLine();
                 }
             }
             
