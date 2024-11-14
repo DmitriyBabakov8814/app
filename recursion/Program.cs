@@ -4,9 +4,9 @@ namespace recursion
 {
     internal class Program
     {
-        static string ShowColor()
+        static string ShowColor(string username, int userage)
         {
-            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+            Console.WriteLine("{0}, вам {1} лет\nНапишите свой любимый цвет на английском с маленькой буквы", username, userage);
 
             var color = Console.ReadLine();
 
@@ -41,21 +41,34 @@ namespace recursion
             return color;
         }
 
+        static void PrintColors( string[] favcolors)
+        {
+            Console.WriteLine("Ваши любимые цвета:");
+            foreach (string fav in favcolors)
+            {
+                Console.WriteLine(fav);
+
+            }
+        }
+
         static void Main(string[] args)
         {
-            var favcolors = new string[3];
+            (string name, int age) anketa;
+            Console.WriteLine("Введите свое имя");
+            anketa.name = Console.ReadLine();
+            Console.WriteLine("Введите возраст");
+            anketa.age = int.Parse(Console.ReadLine());
+            string[] favcolors = new string[3];
             for (int i = 0; i < favcolors.Length; i++)
             {
                 
-                favcolors[i] = ShowColor();
+                favcolors[i] = ShowColor(anketa.name, anketa.age);
+                
             }
-            Console.WriteLine("Цикл закончен");
+            
 
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine(favcolors[i]);
-
-            }
+            
+            PrintColors(favcolors);
             
         }
     }
