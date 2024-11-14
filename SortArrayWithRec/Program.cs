@@ -65,8 +65,7 @@ namespace SortArrayWithRec
         {
             int[] array = GetArrayFromConsole();
 
-            SortArray(array);
-
+            ShowArray(array, true);
         }
     }
 
