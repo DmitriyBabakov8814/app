@@ -6,18 +6,26 @@ namespace SortArrayWithRec
     internal class Program
     {
 
-        static int[] GetArrayFromConsole()
+        static int[] GetArrayFromConsole(int num = 10)
         {
-            var result = new int[5];
-            int temp = 0;
+
+            int[] result = new int[num];
+            
             for (int i = 0; i < result.Length; i++)
             {
                 Console.WriteLine("Введите элемент массива номер {0}", i + 1);
                 result[i] = int.Parse(Console.ReadLine());
             }
-            for(int i =  0; i < result.Length; i++)
+            return result;
+            
+        }
+
+        static int[] SortArray(int[] result)
+        {
+            int temp = 0;
+            for (int i = 0; i < result.Length; i++)
             {
-                for(int j = i + 1; j < result.Length; j++)
+                for (int j = i + 1; j < result.Length; j++)
                 {
                     if (result[j] < result[i])
                     {
@@ -36,11 +44,29 @@ namespace SortArrayWithRec
             return result;
         }
 
+        static void ShowArray(int[] array, bool sortar = false)
+        {
+            if (sortar)
+            {
+                SortArray(array);
+            }
+            else
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.WriteLine("Число элемента массива № {0} = {1}", i + 1, array[i]);
+                }
+            }
+            
+        }
 
 
         static void Main(string[] args)
         {
-            GetArrayFromConsole();
+            int[] array = GetArrayFromConsole();
+
+            SortArray(array);
+
         }
     }
 
