@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp3", "ConsoleApp3\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecondProj", "SecondProj\SecondProj.csproj", "{0B28B8C6-C5DE-4D2D-8119-99A04A9A3E5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recursion", "recursion\recursion.csproj", "{7F0E1832-FBEC-4C31-AB13-509ECBDD11A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "recursion", "recursion\recursion.csproj", "{7F0E1832-FBEC-4C31-AB13-509ECBDD11A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortArrayWithRec", "SortArrayWithRec\SortArrayWithRec.csproj", "{D51AFFC1-E723-447F-AF96-9B048A5409EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortArrayWithRec", "SortArrayWithRec\SortArrayWithRec.csproj", "{D51AFFC1-E723-447F-AF96-9B048A5409EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "param", "param\param.csproj", "{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D51AFFC1-E723-447F-AF96-9B048A5409EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D51AFFC1-E723-447F-AF96-9B048A5409EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D51AFFC1-E723-447F-AF96-9B048A5409EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
