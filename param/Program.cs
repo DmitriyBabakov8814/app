@@ -18,7 +18,7 @@ namespace param
             string name = Console.ReadLine();
             string[] favcolors = new string[3] { "Красный", "Синий", "Зеленый" };
 
-            ShowColors();
+            ShowColors(name, favcolors);
         }
     }
 }

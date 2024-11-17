@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "recursion", "recursion\recu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortArrayWithRec", "SortArrayWithRec\SortArrayWithRec.csproj", "{D51AFFC1-E723-447F-AF96-9B048A5409EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "param", "param\param.csproj", "{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "param", "param\param.csproj", "{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortArrayDescAsc", "SortArrayDescAsc\SortArrayDescAsc.csproj", "{080A9626-30C5-4FF9-85B9-99299EC0288C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8758ABAD-1F26-46AF-B9CC-DEA48BED312A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{080A9626-30C5-4FF9-85B9-99299EC0288C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080A9626-30C5-4FF9-85B9-99299EC0288C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080A9626-30C5-4FF9-85B9-99299EC0288C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080A9626-30C5-4FF9-85B9-99299EC0288C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

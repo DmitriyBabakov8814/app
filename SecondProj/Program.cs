@@ -2,56 +2,89 @@
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
 
-            (string name, string surname, string login, int lenlogin, bool pet, double age, string[] favcolors) User;
 
-            for (int i = 0; i < 3; i++)
+
+            int x = int.Parse(Console.ReadLine());
+            byte y = byte.Parse(Console.ReadLine());
+
+            Console.WriteLine(PowerUp(x, y));
+        }
+
+
+        private static int PowerUp(int x, byte y)
+        {
+
+            if (y == 0)
             {
-                
-                Console.WriteLine("Введите имя");
+                return 1;
+            }
+            
+            else
+            {
 
-                User.name = Console.ReadLine();
-
-                Console.WriteLine("Введите фамилию");
-
-                User.surname = Console.ReadLine();
-
-                Console.WriteLine("Введите логин");
-
-                User.login = Console.ReadLine();
-
-                User.lenlogin = User.login.Length;
-
-                Console.WriteLine("Есть ли у вас животные? Да или Нет");
-
-                if (Console.ReadLine() == "Да")
+                if (y == 1)
                 {
-                    User.pet = true;
+                    return x;
                 }
                 else
                 {
-                    User.pet = false;
+                    return x * PowerUp(x, --y);
+
+
                 }
 
-                Console.WriteLine("Введите возраст пользователя");
-
-                User.age = double.Parse(Console.ReadLine());
-
-                Console.WriteLine("Введите три любимых цвета пользователя");
-
-                User.favcolors = new string[3];
-
-                for (int j = 0; j < User.favcolors.Length; j++)
-                {
-                    User.favcolors[j] = Console.ReadLine();
-                }
             }
+
             
+        }
+
+
+        static decimal Factoriala(decimal x)
+        {
+            if (x == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return x * Factoriala(x - 1);
+            }
+        }
+
+
+
+
+        static void Echo(string phrase, int deep)
+        {
+            string modif = phrase;
             
-            
+            if (modif.Length > 2)
+            {
+                
+                modif = modif.Remove(0, 2);
+            }
+
+            Console.BackgroundColor = (ConsoleColor)deep;
+            Console.WriteLine("..." + modif);
+
+            if (deep > 1)
+            {
+                
+                Echo(modif, deep - 1);
+                
+            }
+
 
         }
+
+
     }
+
+
 }
+
+
