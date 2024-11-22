@@ -1,138 +1,74 @@
-﻿namespace oop
+﻿using System.Runtime.Intrinsics.Arm;
+
+namespace oop
 {
-
-
-    class Human
+    class Company
     {
-        public string name;
-        public int age;
-
-        public void print()
-        {
-            Console.WriteLine("Имя: {0}, возраст {1}", name, age);
-        }
-
-
-        public Human()
-        {
-            name = "null";
-            age = 20;
-        }
-
-
-
-        public Human(string n)
-        {
-            name = n;
-            age = 20;
-        }
-
-
-        public Human(string n, int a)
-        {
-            name = n;
-            age = a;
-        }
-
+        public string Type;
+        public string Name;
     }
 
-
-    struct Animal
+    class Department
     {
-        public string petname;
-        public int petage;
-        public void info()
-        {
-            Console.WriteLine("Имя {} Возраст {]");
-        }
-
-        public Animal(string t)
-        {
-
-            petname = t;
-
-        }
-
+        public Company company;
+        public City city;
     }
 
-
-    class Pen
+    class City
     {
-        public string color;
-        public int cost;
-
-        public void Show()
-        {
-            Console.WriteLine("Color: {0}, Cost: {1}", color, cost);
-        } 
-
-        public Pen()
-        {
-            color = "Черный";
-            cost = 100;
-
-        }
-
-        public Pen(string penColor, int PenCost)
-        {
-            color = penColor;
-            cost = PenCost;
-        }
-
-
-
+        public string Name;
     }
-
-
-
-
-    class Rectangle
-    {
-        public int x;
-        public int y;
-
-        public int Square()
-        {
-            return x * y;
-        }
-
-        public Rectangle()
-        {
-            x = 6;
-            y = 4;
-        }
-
-
-
-        public Rectangle(int data)
-        {
-            x = data;
-            y = data;
-        }
-
-        public Rectangle(int first, int second)
-        {
-            x = first; 
-            y = second;
-        }
-
-    }
-
-
 
     class Program
     {
         static void Main(string[] args)
         {
-            Pen pen = new Pen();
-            pen.Show();
+            Department department = GetCurrentDepartment();
 
-            pen = new Pen("Black", 100);
-            pen.Show();
+            if (department != null)
+            {
+                Console.WriteLine("У банка {0} есть отделение в {1}", department.company.Name, department.city.Name);
 
-            Rectangle rect = new Rectangle();
-            Console.WriteLine(rect.Square());
+            }
 
         }
+
+        static Department GetCurrentDepartment()
+        {
+            Department dep = new Department
+            {
+                company = new Company { Name = "тесла", Type = "Банк" },
+                city = new City { Name = null }
+            }; 
+            
+            
+
+
+            if (dep.company.Type != null && dep.city.Name != null)
+            {
+                if (dep.company.Type == "Банк" && dep.city.Name == "Питер")
+                {
+
+                   return dep;
+
+                }
+
+                else
+                {
+                    Console.WriteLine("Неизвестная компания");
+                    
+                }
+            }
+            else
+            {
+                Console.WriteLine("Значения пустые");
+            }
+            return null;
+
+
+            
+        }
     }
+
+
 }
